@@ -9,3 +9,7 @@ receiving a fresh object, you’ll get the one you already created.
 2. Provide a global access point to that instance. It lets you access
 some object from anywhere in the program. However, it also protects
 that instance from being overwritten by other code.
+<h2>Class diagram for the project</h2>
+
+![image alt](https://github.com/EwanMelibari/Singelton-Architercture/blob/main/Logging%20service%20class%20Diagram-Page-1.drawio.png)
+<p>I'll build a very simple logging service as an example in python</p>
