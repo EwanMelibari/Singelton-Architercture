@@ -1,4 +1,5 @@
 import logging
+# sys is used for console output, like stdout and stderr streams
 import sys
 
 # Singleton Architecture - Logging Service
@@ -40,16 +41,34 @@ class LoggingService:
         return cls._instance
 
     def debug(self, message):
-        pass
+        self._logger.debug(message)
 
     def error(self, message):
-        pass
+        self._logger.error(message)
 
     def info(self, message):
-        pass
+        self._logger.info(message)
 
     def warning(self, message):
-        pass
+        self._logger.warning(message)
 
     def critical(self, message):
-        pass
+        self._logger.critical(message)
+
+
+class Main:
+
+    def main():
+        logger1 = LoggingService()
+        logger2 = LoggingService()
+
+        logger1.info("This is an info message from logger1.")
+        logger2.error("This is an error message from logger2.")
+
+        # Verify that both loggers are the same instance
+        print(f"Logger1 is Logger2: {logger1 is logger2}")        
+
+
+
+if __name__ == "__main__":
+    Main.main()        
