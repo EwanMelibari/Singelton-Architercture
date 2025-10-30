@@ -17,7 +17,7 @@ When managing shared resources like logging, you need guaranteed consistency. Th
 
 ---
 
-## ⚙️ Implementation Strategy (The Python Magic)
+## Implementation Strategy
 
 The entire Singleton behavior is enforced by overriding the special **`__new__`** method, which is the class constructor responsible for creating the instance.
 
@@ -38,7 +38,7 @@ This diagram visualizes how the class manages its own singular instance.
 
 ---
 
-## 🚀 Usage and Verification
+## Usage and Verification
 
 The code below demonstrates that two seemingly separate instances (`logger1` and `logger2`) are, in fact, references to the exact same object, confirming the Singleton pattern.
 
