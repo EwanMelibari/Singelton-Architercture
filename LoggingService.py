@@ -3,7 +3,6 @@ import logging
 import sys
 
 # Singleton Architecture - Logging Service
-# Still working on it :)
 
 class LoggingService:
     _instance = None
@@ -64,11 +63,14 @@ class Main:
 
         logger1.info("This is an info message from logger1.")
         logger2.error("This is an error message from logger2.")
+        logger1.debug("This is a debug message from logger1.")
+        logger2.warning("This is a warning message from logger2.")
+        logger1.critical("This is a critical message from logger1.")
 
         # Verify that both loggers are the same instance
-        print(f"Logger1 is Logger2: {logger1 is logger2}")        
-
-
+        print(f"Logger1 is Logger2: {logger1 is logger2}")
+        print(f"Logger1 ID: {id(logger1)}")
+        print(f"Logger2 ID: {id(logger2)}")
 
 if __name__ == "__main__":
     Main.main()        
